@@ -44,9 +44,8 @@ public class MySubscriber<T> implements Flow.Subscriber<T>{
 
 	@Override
 	public void onNext(T item) {
-		System.out.println("#####" +
-				Thread.currentThread().getName() + " name: " + name + " item: " + item + " #####");
-		System.out.println(name+" receive "+item);
+		System.out.println("#####" + Thread.currentThread().getName() + " name: " + name + " item: " + item + " #####");
+		//System.out.println(name+" receive "+item);
 		try {
 			Thread.sleep(10);
 		} catch (InterruptedException e) {
